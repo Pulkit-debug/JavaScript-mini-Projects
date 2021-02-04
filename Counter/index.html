@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #input-box {
+        background-color: cadetblue;
+        margin: 40px 50px;
+        text-align: center;
+        padding: 40px 0;
+    }
+    #heading {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+    #input-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 40px;
+        margin-top: 80px;
+    }
+    input {
+        font-size: 1.2rem;
+        width: 25%;
+        padding: 20px;
+        border-radius: 20px;
+        border: none;
+    }
+
+    #btn {
+        border-radius: 50px;
+        font-weight: 900;
+        border: none;
+        box-shadow: 0px 5px 15px white;
+        cursor: pointer;
+        background-color: rgb(211, 207, 207);
+        
+    }
+    #output-box {
+        background-color: rgb(183, 124, 252);
+        width: 80%;
+        margin: auto;
+        height: 35vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #display-count {
+        width: 15%;
+        max-width: 80px;
+        background-color: rgb(245, 243, 243);
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    #display-count p {
+        text-align: center;
+        font-size: 3rem;
+        margin: 0;
+        width: 100%;
+        line-height: 80px;
+        background-color: aliceblue;
+        border-top: 2px solid black;
+        font-weight: bold;
+    }
+    .next {
+        position: absolute;
+        top: 82px;
+    }
+    p.animate {
+        transition: all 0.5s ease-in-out;
+        top: 0;
+    }
+</style>
+<body>
+    <div id="input-box">
+        <h2 id="heading">Enter your Number for counter</h2>
+        <div id="input-container">
+        <input type="text" name="number-input-field" id="input-field">
+        <button type="submit" id="btn">Search Counter</button>
+    </div>
+    </div>
+
+
+    <div id="output-box">
+        <div class="counter" id="display-count">
+            <p class="current">0</p>
+            <p class="next">1</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

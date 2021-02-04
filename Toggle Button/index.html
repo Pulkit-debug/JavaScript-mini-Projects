@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      transition: all 0.5s ease-in-out;
+    }
+    #toggle-button {
+      background-color: white;
+      border: 2px solid black;
+      height: 100px;
+      width: 200px;
+      border-radius: 50px;
+      margin: 50px auto;
+      transition: all 0.5s ease-in-out;
+    }
+    #circle {
+      height: 95px;
+      width: 100px;
+      background-color: black;
+      border-radius: 50px;
+      margin: 2px;
+      transition: all 0.5s ease-in-out;
+      /* background-color: white; */
+    }
+    #heading {
+      margin: 100px auto;
+      text-align: center;
+      font-size: 3rem;
+    }
+    .color-white {
+      color: white;
+    }
+    .white-border {
+      border: 2px solid white !important;
+    }
+    .bg-color-black {
+      background-color: black;
+    }
+    .color-black {
+      background-color: black;
+    }
+  </style>
+  <body>
+    <div id="toggle-button">
+      <div id="circle"></div>
+    </div>
+    <h1 id="heading">Toggle button to change effect</h1>
+    <script src="index.js"></script>
+  </body>
+</html>
