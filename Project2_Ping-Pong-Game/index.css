@@ -1,0 +1,52 @@
+div,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#rod1 {
+  position: absolute;
+  left: 700px;
+}
+.rod {
+  background-color: rgb(144, 243, 243);
+  border: 2px solid black;
+  display: flex;
+  width: 10vw;
+  height: 1.3vw;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rod p {
+  font-weight: 800;
+}
+
+#rod2 {
+  position: absolute;
+  top: calc(100vh - 2.2vw);
+  left: 700px;
+}
+
+#ball {
+  position: absolute;
+  background: red;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 2s ease-in-out;
+}
+
+#guide-lines {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: -1;
+}
