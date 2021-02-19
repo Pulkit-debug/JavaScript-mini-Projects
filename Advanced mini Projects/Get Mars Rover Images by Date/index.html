@@ -10,6 +10,9 @@
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     <style>
+      body {
+        margin: 0;
+      }
       #container {
         width: 100%;
         background-color: rgb(190, 253, 253);
@@ -31,8 +34,13 @@
         background-color: rgb(0, 0, 0);
         color: white;
         border-radius: 10px;
+        cursor: pointer;
+        font-weight: 700;
       }
 
+      button:hover {
+        background-color: rgb(141, 138, 138);
+      }
       #image {
         display: flex;
         justify-content: center;
@@ -54,10 +62,21 @@
         height: 40%;
         margin: 5px;
       }
+      #second-container {
+        background-color: rgb(202, 202, 202);
+        display: flex;
+        justify-content: space-evenly;
+        height: 15vh;
+        align-items: center;
+      }
+      #second-container button {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
     </style>
   </head>
   <body>
-    <h1 style="text-align: center">
+    <h1 style="text-align: center; margin: 5px 0px 5px 0px">
       Fetch Mars Rover Images on Particular Date
     </h1>
     <div id="container">
@@ -65,7 +84,15 @@
         <input type="text" id="datepicker" />
       </div>
       <div id="btn">
-        <button type="submit">Fetch Dog</button>
+        <button type="submit">Fetch Images</button>
+      </div>
+    </div>
+    <div id="second-container">
+      <div id="prev-btn">
+        <button type="submit">Prev</button>
+      </div>
+      <div id="next-btn">
+        <button type="submit">Next</button>
       </div>
     </div>
 
