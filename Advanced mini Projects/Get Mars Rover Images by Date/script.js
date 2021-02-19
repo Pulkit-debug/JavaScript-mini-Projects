@@ -5,7 +5,8 @@ $(function () {
 });
 
 // var gotImages = false;
-$("#btn").on("click", function () {
+$("#btn").on("click", function (event) {
+  event.preventDefault();
   $("#nasa-images").empty();
   var dateValue = $("#datepicker").val();
 
@@ -26,14 +27,20 @@ $("#btn").on("click", function () {
       success: function (result) {
         let array = result.photos;
 
-        for (let i = 0; i < array.length; i++) {
-          let imageUrl = array[i].img_src;
-          let image = $(document.createElement("img"));
-          image.attr("src", imageUrl);
-          image.attr("class", "my-image");
-          image.appendTo("#nasa-images");
+        if (array.length == 0) {
+          alert("No Photos available for this Date");
+        } else {
+          for (let i = 0; i < array.length; i++) {
+            let imageUrl = array[i].img_src;
+            let image = $(document.createElement("img"));
+            image.attr("src", imageUrl);
+            image.attr("class", "my-image");
+            image.appendTo("#nasa-images");
+          }
         }
       },
+    }).fail(function () {
+      alert("Request to Nasa has been failed.");
     });
   }
 });
